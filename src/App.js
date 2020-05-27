@@ -4,8 +4,8 @@ import { Page, Config } from 'contentflare-react'
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 
 Config.init({
-    organization: process.env.ORGANIZATION_SLUG,
-    publicKey:    process.env.PUBLIC_API_KEY,
+    organization: process.env.REACT_APP_ORGANIZATION_SLUG,
+    publicKey:    process.env.REACT_APP_PUBLIC_API_KEY,
 })
 
 const App = () => {

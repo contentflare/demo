@@ -9,11 +9,11 @@
   "scripts": {
   },
   "env": {
-    "ORGANIZATION_SLUG": {
+    "REACT_APP_ORGANIZATION_SLUG": {
       "description": "The organization slug from content flare.",
       "required": true
     },
-    "PUBLIC_API_KEY": {
+    "REACT_APP_PUBLIC_API_KEY": {
       "description": "The public API key from content flare.",
       "required": true
     }
