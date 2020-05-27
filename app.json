@@ -1,0 +1,37 @@
+{
+  "name": "Content Flare Demo",
+  "description": "This is a demo app for Content Flare in React.",
+  "keywords": [],
+  "website": "https://www.contentflare.io/",
+  "repository": "https://github.com/contentflare/demo",
+  "logo": "https://contentflare.io/images/logo.svg",
+  "success_url": "/",
+  "scripts": {
+  },
+  "env": {
+    "ORGANIZATION_SLUG": {
+      "description": "The organization slug from content flare.",
+      "required": true
+    },
+    "PUBLIC_API_KEY": {
+      "description": "The public API key from content flare.",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "image": "heroku/nodejs",
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "https://github.com/mars/create-react-app-buildpack.git"
+    }
+  ],
+  "environments": {
+  }
+}
+
