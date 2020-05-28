@@ -6,9 +6,11 @@
   "repository": "https://github.com/contentflare/demo",
   "logo": "https://contentflare.io/images/logo.svg",
   "success_url": "/",
-  "scripts": {
-  },
+  "scripts": {},
   "env": {
+    "DOMAIN": {
+      "description": "The domain of the customer's site (this will allow importing their CSS)."
+    },
     "REACT_APP_ORGANIZATION_SLUG": {
       "description": "The organization slug from content flare.",
       "required": true
@@ -30,7 +32,6 @@
       "url": "mars/create-react-app"
     }
   ],
-  "environments": {
-  }
+  "environments": {}
 }
 
