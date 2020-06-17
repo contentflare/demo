@@ -53,7 +53,7 @@ const writeFile = util.promisify(fs.writeFile);
 			// update links in the index.html
 			console.log(`Injecting CSS links in the index.html`);
 			const linksInsert = cssContent
-				.map(content => `<style type="text/css">${link}</style>`)
+				.map(content => `<style type="text/css">${content}</style>`)
 				.join('');
 			const indexContent = await readFile('./public/index.html', 'utf8');
 			const newIndexContent = indexContent.replace('<!-- CSS HEADERS -->', linksInsert);
