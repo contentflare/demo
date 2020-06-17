@@ -43,11 +43,17 @@ const writeFile = util.promisify(fs.writeFile);
 				}
 			}
 			console.log(`Parsing content: DONE`);
+			
+			// preload the data
+			let cssContent = [];
+			for (let i = 0; i < links.length; i++) {
+				cssContent[i] = await fetch(links[i]);
+			}
 
 			// update links in the index.html
 			console.log(`Injecting CSS links in the index.html`);
-			const linksInsert = links
-				.map(link => `<link href="${link}" rel="stylesheet">`)
+			const linksInsert = cssContent
+				.map(content => `<style type="text/css">${link}</style>`)
 				.join('');
 			const indexContent = await readFile('./public/index.html', 'utf8');
 			const newIndexContent = indexContent.replace('<!-- CSS HEADERS -->', linksInsert);
